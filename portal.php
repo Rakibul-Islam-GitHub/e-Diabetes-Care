@@ -137,12 +137,7 @@ padding:0px 35px;
 		</div>
 
 
-
-
 		</div>
-
-
-
 
 
 			 </div>
