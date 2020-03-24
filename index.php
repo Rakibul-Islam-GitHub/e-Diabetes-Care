@@ -1,4 +1,2 @@
-<?php echo tes
-
-
+<?php echo test
 ?>
