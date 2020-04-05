@@ -1,11 +1,19 @@
 <?php
 include('database/portallogin.php');
+<<<<<<< HEAD
+if(isset($_SESSION['username'])){
+  
+header("location:doctorportal.php");
+}
+
+=======
 include('database/registration.php');
 if(isset($_SESSION['username'])){
 
 header("location:doctorportal.php");
 }
 
+>>>>>>> 1a10e5f2cb8a29719d471f782e9e702673314500
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
