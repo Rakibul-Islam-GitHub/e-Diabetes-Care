@@ -43,10 +43,10 @@ $login=$conn->query("INSERT INTO logins (username,password,role) VALUES ('$usern
   patient registration query....
      */
 
- function patientregistration($conn,$table,$username,$name,$email, $password,$age,$address,$degree,$gender,$phone,$image,$role)
+ function patientregistration($conn,$table,$name,$email,$password,$age,$gender,$address,$phone,$image,$role)
  {
-$result = $conn->query("INSERT INTO ".$table." (username,name,email, password,age,address,degree,gender,mobileno,image) VALUES ('$username','$name','$email', '$password','$age','$address','$degree','$gender','$phone','$image')");
-$login=$conn->query("INSERT INTO logins (username,password,role) VALUES ('$username','$password','$role')");
+$result = $conn->query("INSERT INTO ".$table." (name,email, password,age,gender,address,mobileno,image) VALUES ('$name','$email','$password','$age','$gender','$address','$phone','$image')");
+$login=$conn->query("INSERT INTO logins (username,password,role) VALUES ('$email','$password','$role')");
 
  return $result;
  }
