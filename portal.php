@@ -1,4 +1,11 @@
+<?php
+include('database/portallogin.php');
+if(isset($_SESSION['username'])){
+  
+header("location:doctorportal.php");
+}
 
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <noscript>
@@ -74,17 +81,17 @@ padding:0px 35px;
         <div class="center">
           <img id="logo_login"src="images/ediabetes.png" alt="logo">
         </div>
-        <form action="/users/login" style="" class="form-signin" id="UserLoginForm" method="post" accept-charset="utf-8">
+        <form action="" style="" class="form-signin" id="UserLoginForm" method="post" accept-charset="utf-8">
           <div class="control-group">
             <div class="inputlogin">
               <span class="add-on"><i class="icon-user"></i></span>
-              <input class="form-control loginform" name="email" required="required" placeholder="Username" maxlength="255" type="text" id="patientemail">
+              <input class="form-control loginform" name="username" required="required" placeholder="Username" maxlength="255" type="text" id="patientemail">
             </div>
           </div>
           <div class="control-group">
             <div class="inputlogin">
               <span class="add-on"><i class="icon-lock"></i></span>
-              <input class="form-control loginform" name="pass" required="required" placeholder="Password" type="password" id="patirntpass">
+              <input class="form-control loginform" name="password" required="required" placeholder="Password" type="password" id="patirntpass">
             </div>
           </div>
           <div class="control-group">
@@ -92,7 +99,7 @@ padding:0px 35px;
               <input type="checkbox" name="data[User][remember_me]" value="1" id="UserRememberMe"> Remember Me?</label>
           </div>
           <div class="control-group">
-            <input class="btn btn-primary btn-large btn-block" type="submit" value="Sign in">
+            <input class="btn btn-primary btn-large btn-block" type="submit"name="submit" value="Sign in">
           </div>
           <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" data-toggle="modal" data-target="#register" >Register here</a></p>
         </form>
@@ -113,22 +120,23 @@ padding:0px 35px;
       </div>
 	  <div class="modal-body">
        <form method="POST" action="" ENCTYPE="multipart/form-data" action="" id="form1">
+
        <input type="text" name="pname" class="form-control" onkeyup="letters(this)" required placeholder="Enter your name"><br>
        <input type="email" name="pemail" class="form-control" required placeholder="Enter your email"><br>
-       <input type="number" name="p_age" class="form-control" required placeholder="Enter your age"><br>
-       <input type="password" name="p_password" class="form-control" required placeholder="Enter your password"><br>
-	   <input type="text" name="adridpt" class="form-control" required placeholder="Confirm password"><br>
+       <input type="number" name="page" class="form-control" required placeholder="Enter your age"><br>
+       <input type="password" name="ppassword" class="form-control" required placeholder="Enter your password"><br>
+	   <input type="text" name="pconpassword" class="form-control" required placeholder="Confirm password"><br>
        <input type="text" name="paddress" class="form-control" required placeholder="Enter your address"><br>
 
 	   <label>Gender : </label>
-	   <input type="radio" value="Male" name="gender" required> Male
-	   <input type="radio" value="Female" name="gender" required> Female <br></br>
+	   <input type="radio" value="Male" name="pgender" required> Male
+	   <input type="radio" value="Female" name="pgender" required> Female <br></br>
 		<div class="input-group form-group ">
-		<span class="input-group-addon">+880</span>
-		<input type="number" name="p_phone" class="form-control" id="user" maxlength="10"  placeholder="Enter your contact no." required >
+		<span class="input-group-addon">+88</span>
+		<input type="number" name="pphone" class="form-control" id="user" maxlength="10"  placeholder="Enter your contact no." required >
 		</div>
 		<label>Your Picture</label>
-		<input type="file" class="form-control patientpic" required name="pupload"/><br>
+		<input type="file" class="form-control patientpic" required name="pimage"/><br>
 
 		<center><input type="submit" value="Register" name="btn_pat" class="btn btn-danger">
 		<input type="button" value="Reset" onclick="rset()" class="btn btn-warning"></center>

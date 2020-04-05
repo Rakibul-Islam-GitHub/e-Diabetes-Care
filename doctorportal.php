@@ -213,7 +213,7 @@
                 <input type="button" class="btn" name="" value="update">
               </div>
                  <div class="appointment-table">
-                 <h4 class="h">Appointment List</h4>
+                 <h2 class="h">Appointment List</h4>
                    <table class="table table-hover table-bordered "id="table">
          <thead>
            <tr class="table-bordered">
