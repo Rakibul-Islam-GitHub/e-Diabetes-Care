@@ -5,6 +5,8 @@
   box-sizing: border-box;
 
 }
+<<<<<<< HEAD
+=======
 
 .wrapper {
   width: 90%;
@@ -135,6 +137,7 @@
 
 
 
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
 nav{
   background: rgb(149,149,149);
   height: 50px;
@@ -204,11 +207,19 @@ display: table;
 background-color: rgb(249,249,250);
    width:80%;
 }
+<<<<<<< HEAD
+.dashboard-div{
+=======
 #dashboard-div{
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
   margin-top: 5px;
   float: right;
 background-color: rgb(249,249,250);
    width:80%;
+<<<<<<< HEAD
+
+=======
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
   position: relative;
   height: 100%;
 }
@@ -300,6 +311,10 @@ color: #212529;
 background-color: rgba(0, 0, 0, 0.075);
 }
 
+<<<<<<< HEAD
+
+
+=======
 #profile-div{
   display: none;
 
@@ -372,6 +387,7 @@ background-color: rgb(249,249,250);
 #appointment-div{
   display: none;
 }
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
 @media(max-width:480px){
 
   .total-patient{
@@ -438,6 +454,8 @@ background-color: rgb(249,249,250);
 
   }
 }
+<<<<<<< HEAD
+=======
 
 /* Appointment div start */
 
@@ -477,3 +495,4 @@ font-size: 20px;
   margin-top: 5%;
   margin-bottom: 5%;
 }
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571

@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="doctorportal.css">
+    <title>Doctor Portal</title>
+=======
 
     <link rel="stylesheet" href="doctorportal.css">
     <title>Doctor Portal</title>
@@ -10,6 +14,7 @@
 			  src="https://code.jquery.com/jquery-3.4.1.js"
 			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 			  crossorigin="anonymous"></script>
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
   </head>
   <body>
 
@@ -23,17 +28,26 @@
         </ul>
 
       </nav>
+<<<<<<< HEAD
+=======
 
          <!-- START OFF dashborad -->
 
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
       <section class="section">
 
 
       <div class="col-sm-4 ">
            <div class="navbar">
+<<<<<<< HEAD
+              <a herf="#"id="dashborad">dashborad</a>
+              <a herf="#"id="profile">profile</a>
+              <a herf="#"id="patients">patients</a>
+=======
               <a herf="#"id="dashboard">dashboard</a>
               <a herf="#"id="profile">profile</a>
               <a herf="#"id="patient">patients</a>
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
               <a herf="#" id="appointment">appointment</a>
               <a herf="#"id="schedule">schedule</a>
               <a herf="#"id="chat">chat</a>
@@ -60,7 +74,10 @@
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
         <!-- all appointment schedule start -->
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
 
 
             <div class="doctortable">
@@ -105,6 +122,16 @@
 
       </div>
 
+<<<<<<< HEAD
+
+      </section>
+      <script type="text/javascript">
+        document.getElementById("appointment").onclick= function(){
+          document.getElementById("dashboard-div").style.display = "none";
+          document.getElementById("doctordetails").style.display = "block";
+
+        }
+=======
 <!-- all appointment schedule end -->
 
 
@@ -296,6 +323,7 @@
            document.getElementById("profile-div").style.display="none";
            document.getElementById("dashboard-div").style.display="none";
          }
+>>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
 
       </script>
   </body>

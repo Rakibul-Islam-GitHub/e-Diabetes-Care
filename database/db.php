@@ -23,7 +23,11 @@ function OpenCon()
  $dbpass = "";
  $db = "e_diabetes_care";
  $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n".$conn -> error);
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 1a10e5f2cb8a29719d471f782e9e702673314500
  return $conn;
  }
 /*
@@ -39,6 +43,20 @@ $login=$conn->query("INSERT INTO logins (username,password,role) VALUES ('$usern
 
  return $result;
  }
+<<<<<<< HEAD
+=======
+ /*
+  patient registration query....
+     */
+
+ function patientregistration($conn,$table,$username,$name,$email, $password,$age,$address,$degree,$gender,$phone,$image,$role)
+ {
+$result = $conn->query("INSERT INTO ".$table." (username,name,email, password,age,address,degree,gender,mobileno,image) VALUES ('$username','$name','$email', '$password','$age','$address','$degree','$gender','$phone','$image')");
+$login=$conn->query("INSERT INTO logins (username,password,role) VALUES ('$username','$password','$role')");
+
+ return $result;
+ }
+>>>>>>> 1a10e5f2cb8a29719d471f782e9e702673314500
 /*
  function deletedoctorquery($conobj,$table,$username)
 {

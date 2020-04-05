@@ -1,10 +1,19 @@
 <?php
 include('database/portallogin.php');
+<<<<<<< HEAD
 if(isset($_SESSION['username'])){
   
 header("location:doctorportal.php");
 }
 
+=======
+include('database/registration.php');
+if(isset($_SESSION['username'])){
+
+header("location:doctorportal.php");
+}
+
+>>>>>>> 1a10e5f2cb8a29719d471f782e9e702673314500
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -138,7 +147,7 @@ padding:0px 35px;
 		<label>Your Picture</label>
 		<input type="file" class="form-control patientpic" required name="pimage"/><br>
 
-		<center><input type="submit" value="Register" name="btn_pat" class="btn btn-danger">
+		<center><input type="submit" value="Register" name="btn_patient" class="btn btn-danger">
 		<input type="button" value="Reset" onclick="rset()" class="btn btn-warning"></center>
 		</form>
 
