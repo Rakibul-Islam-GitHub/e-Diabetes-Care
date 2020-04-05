@@ -57,6 +57,12 @@ padding:0px 35px;
 .patientpic{
   padding: 3px 12px 6px 6px;
 }
+#myModalLabel {
+    margin-left: 174px;
+    /* width: 58px; */
+    text-align: center;
+    color: blue;
+}
 
 .well {
 
@@ -104,17 +110,17 @@ padding:0px 35px;
           </div>
           <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" data-toggle="modal" data-target="#register" >Register here</a></p>
         </form>
-      </div><!--/.login-->
-    </div><!--/.span12-->
-  </div><!--/.row-fluid-->
-</div><!--/.container-->
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Registration</h5>
+        <h5 class="text-center" id="myModalLabel">Registration</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -122,22 +128,21 @@ padding:0px 35px;
 	  <div class="modal-body">
        <form method="POST" action="" ENCTYPE="multipart/form-data" action="" id="form1">
 
-       <input type="text" name="pname" class="form-control" onkeyup="letters(this)" required placeholder="Enter your name"><br>
+       <input type="text" name="pname" class="form-control"  required placeholder="Enter your name"><br>
        <input type="email" name="pemail" class="form-control" required placeholder="Enter your email"><br>
-       <input type="number" name="page" class="form-control" required placeholder="Enter your age"><br>
        <input type="password" name="ppassword" class="form-control" required placeholder="Enter your password"><br>
 	   <input type="text" name="pconpassword" class="form-control" required placeholder="Confirm password"><br>
-       <input type="text" name="paddress" class="form-control" required placeholder="Enter your address"><br>
-
-	   <label>Gender : </label>
+     <input type="number" name="page" class="form-control" required placeholder="Enter your age">
+	   <label class="mt-2">Gender : </label>
 	   <input type="radio" value="Male" name="pgender" required> Male
-	   <input type="radio" value="Female" name="pgender" required> Female <br></br>
+	   <input type="radio" value="Female" name="pgender" required> Female <br>
+     <input type="text" name="paddress" class="form-control" required placeholder="Enter your address"><br>
 		<div class="input-group form-group ">
 		<span class="input-group-addon">+88</span>
 		<input type="number" name="pphone" class="form-control" id="user" maxlength="10"  placeholder="Enter your contact no." required >
 		</div>
 		<label>Your Picture</label>
-		<input type="file" class="form-control patientpic" required name="pimage"/><br>
+		<input type="file" class="form-control patientpic" required name="file"/><br>
 
 		<center><input type="submit" value="Register" name="btn_patient" class="btn btn-danger">
 		<input type="button" value="Reset" onclick="rset()" class="btn btn-warning"></center>
