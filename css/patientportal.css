@@ -1,0 +1,104 @@
+
+
+#doctorpage{
+  display: none;
+}
+#doctordetails{
+  display: none;
+}
+
+
+.profile-widget {
+  height: 215px;
+    width: 100%;
+  margin-top: 20px;
+background-color: #fff;
+border-radius: 4px;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+margin-bottom: 30px;
+padding: 5px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.profile-widget .user-name > a {
+	color: #333;
+}
+.doctor-img {
+    cursor: pointer;
+    height: 80px;
+    margin: 0 auto 15px;
+    position: relative;
+    width: 80px;
+}
+.text-ellipsis {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.avatar {
+    background-color: #aaa;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    height: 108%;
+    line-height: 38px;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 92%;
+    position: relative;
+    white-space: nowrap;
+}
+.doctor-img {
+	cursor: pointer;
+	height: 45%;
+	margin: 0 auto 15px;
+	position: relative;
+	width: 45%;
+
+}
+
+.doc-prof {
+	color: #777;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+.doctor-name {
+	margin: 0;
+}
+.doctor-name a {
+	color: #333;
+}
+.text-ellipsis {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+h4, .h4 {
+    font-size: 1.125rem;
+}
+.doctor-img a img {
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
+.col-sm-4 {
+    display: inline-block !important;
+        max-width: 40%;
+  }
+  @media(max-width:600px) {
+    .col-sm-4 {
+        display: block !important;
+            max-width: 90%;
+      }
+    }
