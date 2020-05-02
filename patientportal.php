@@ -245,7 +245,7 @@ width: 15%;
               <a class="nav-link " href="#"> <li class="list-group-item list-group-item-action active"  id="dashboard-menu" >Dashboard</li></a>
               <a class="nav-link " href="#"> <li id="doctor" class="list-group-item list-group-item-action"  >Doctors</li></a>
 
-                <a class="nav-link " href="#"><li class="list-group-item list-group-item-action">Appointment</li></a>
+                <a class="nav-link " href="#"><li id="appointment" class="list-group-item list-group-item-action">Appointment</li></a>
                 <a class="nav-link " href="#"> <li id="patient" class="list-group-item list-group-item-action">Profile</li> </a>
                 <a class="nav-link " href="#"><li class="list-group-item list-group-item-action">Chat</li></a>
                 <!-- <a class="nav-link " href="#"><li class="list-group-item list-group-item-action">Contact</li></a> -->
@@ -336,15 +336,96 @@ width: 15%;
 
     <!-- doctor-list page code end -->
 
+
+    <!-- doctor appointment start -->
+    <section class="appointmentform" id="appointmentpage">
+
+      <div class="row">
+                        <div class="col-md-8 ">
+                            <form>
+
+                                <div class="row">
+
+                                    <div class="col-md-8 mt-3">
+                                        <div class="form-group">
+                                            <label>Doctor</label>
+                                            <select class="select col-md-6 text-center">
+    											<option>Select</option>
+
+                          <?php
+                          include_once('database/showalldoctors.php');
+                          $connection = new databasefull();
+                          $conobj=$connection->OpenCon();
+                          $result=$conn->query("SELECT * FROM doctors");
+                          $total=mysqli_num_rows($result);
+                          if ($result->num_rows > 0) {
+                          while($row = mysqli_fetch_assoc($result))
+
+                           {
+                            echo "
+                            <option>".$row['name']."</option>
+
+                            ";
+
+                           }
+                         }
+                           ?>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                        <div class="form-group col-md-8">
+                                            <label>Date</label>
+
+                                                <input type="date" class="form-control datetimepicker">
+
+                                        </div>
+
+
+                                        <div class="form-group col-md-8">
+                                            <label>Time</label>
+
+                                                <input type="time" class="form-control" id="datetimepicker3">
+
+                                        </div>
+
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Patient Phone Number</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Comment (Optional)</label>
+                                    <textarea cols="30" rows="4" class="form-control"></textarea>
+                                </div>
+
+                                <div class="m-t-20 text-center">
+                                    <button class="btn btn-primary submit-btn" id="createappointment">Create Appointment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+   <!-- doctor appointment end -->
+
 </section>
 
 
 
 
    <!---doctor details table start--->
-
-            <div id="doctordetails" class="col-sm-8 mt-5">
-<div class="success mb-1" ></div>
+<div id="doctordetails" class="col-sm-8 mt-5">
+    <div class="success mb-1" ></div>
           <div class="doctortable">
             <div class="table-title">
                  <div class="row">
@@ -374,13 +455,12 @@ width: 15%;
 
     </tr>
   </thead>
-  <tbody id="doctabledata" class="doctors">
+          <tbody id="doctabledata" class="doctors">
 
-  </tbody>
-</table>
-          </div>
-
-             </div>
+          </tbody>
+         </table>
+    </div>
+</div>
 <!--doctordetails table ends-->
 
 <div id="delete_doctor" class="modal delete-modal" role="dialog">
@@ -398,10 +478,10 @@ width: 15%;
    </div>
 
 
-<!---patient details table starts--->
+<!---appointment form starts--->
 
 
-<!---patient details table end-->
+<!---appointment form  end-->
 
 
 
@@ -583,29 +663,45 @@ var user=0;
 
 document.getElementById("dashboard-menu").onclick= function(){
 document.getElementById("doctorpage").style.display = "none";
-document.getElementById("patientdetails").style.display = "none";
+document.getElementById("appointmentpage").style.display = "none";
+//document.getElementById("patientdetails").style.display = "none";
 document.getElementById("dashboardpage").style.display = "block";
+manageActive(this);
 $('.collapse').collapse('toggle');
 };
 
 document.getElementById("doctor").onclick= function(){
 loadallData("doctors");
 document.getElementById("dashboardpage").style.display = "none";
+document.getElementById("appointmentpage").style.display = "none";
+//document.getElementById("patientdetails").style.display = "none";
 //document.getElementById("patientdetails").style.display = "none";
 document.getElementById("doctorpage").style.display = "block";
+manageActive(this);
+// document.getElementById("dashboard-menu").classList.remove("active");
+// document.getElementById("appointment").classList.remove("active");
+
 $('.collapse').collapse('toggle');
 };
 
-document.getElementById("patient").onclick= function(){
-  $('#patient-add-btn').hide();
-  loadallData("patients");
-document.getElementById("dashboard").style.display = "none";
-document.getElementById("doctordetails").style.display = "none";
-document.getElementById("patientdetails").style.display = "block";
+document.getElementById("appointment").onclick= function(){
+
+document.getElementById("dashboardpage").style.display = "none";
+document.getElementById("doctorpage").style.display = "none";
+//document.getElementById("patientdetails").style.display = "none";
+document.getElementById("appointmentpage").style.display = "block";
+manageActive(this);
 $('.collapse').collapse('toggle');
 };
+/// show active color only the button clicked
+function manageActive(id){
+  document.getElementById("dashboard-menu").classList.remove("active");
+  document.getElementById("appointment").classList.remove("active");
+  document.getElementById("doctor").classList.remove("active");
 
+  id.classList.toggle("active");
 
+}
 
 
 
