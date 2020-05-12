@@ -1,19 +1,22 @@
 <?php
-include('database/portallogin.php');
-<<<<<<< HEAD
-if(isset($_SESSION['username'])){
-  
-header("location:doctorportal.php");
-}
-
-=======
-include('database/registration.php');
+include_once('database/portallogin.php');
 if(isset($_SESSION['username'])){
 
-header("location:doctorportal.php");
+  if ($_SESSION['role']==2) {
+    header("location:doctorportal.php");
+  }
+  elseif ($_SESSION['role']==3) {
+    header("location:patientportal.php");
+  }
+  else {
+    header("location:adminportal.php");
+  }
+
+
 }
 
->>>>>>> 1a10e5f2cb8a29719d471f782e9e702673314500
+include_once('database/registration.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -24,10 +27,11 @@ header("location:doctorportal.php");
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Portal</title>
 
   <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -70,6 +74,13 @@ padding:0px 35px;
     /* width: 58px; */
     text-align: center;
     color: blue;
+}
+.regconfirm{
+  color: green;
+
+}
+.wronglogin{
+  color: red;
 }
 
 .well {
@@ -150,9 +161,9 @@ padding:0px 35px;
 		<input type="number" name="pphone" class="form-control" id="user" maxlength="10"  placeholder="Enter your contact no." required >
 		</div>
 		<label>Your Picture</label>
-		<input type="file" class="form-control patientpic" required name="file"/><br>
+		<input type="file" class="form-control patientpic"  name="file"/><br>
 
-		<center><input type="submit" value="Register" name="btn_patient" class="btn btn-danger">
+		<center><input type="submit" value="Register" name="btn_patient" class="btn btn-danger" id="regbtn">
 		<input type="button" value="Reset" onclick="rset()" class="btn btn-warning"></center>
 		</form>
 
@@ -170,5 +181,24 @@ padding:0px 35px;
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+  $("#regbtn").click(function{
+    alert('worked');
+    $("<div class='form regconfirm1 mt-3 text-center'>
+    <h3 class='regconfirm'>You are registered successfully</h3>
+    <p>You can login now!</p></div>").appendTo('body').delay(5000).fadeOut();
+
+
+  });
+
+
+});
+
+
+
+
+
+</script>
   </body>
 </html>
