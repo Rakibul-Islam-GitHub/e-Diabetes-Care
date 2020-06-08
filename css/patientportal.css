@@ -1,5 +1,4 @@
 
-
 #doctorpage{
   display: none;
 }
@@ -20,6 +19,10 @@ padding: 5px;
 text-align: center;
 position: relative;
 overflow: hidden;
+border: 2px solid #ddd;
+border-radius: 5px;
+background: #fff;
+box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
 }
 .profile-widget .user-name > a {
 	color: #333;
@@ -96,9 +99,39 @@ h4, .h4 {
     display: inline-block !important;
         max-width: 40%;
   }
+  #appointmentpage{
+    display: none;
+  }
+
+  .patient-img {
+  border: 0.3rem solid rgba(#fff, 0.3);
+  margin-top: -6rem;
+  margin-bottom: 1rem;
+  max-width: 9rem;
+}
+
+  #profilepage{
+    display: none;
+  }
+  #chatpage{
+    display: none;
+  }
+  select.select.col-md-6.text-center {
+      padding: 5px;
+      width: 100%;
+  }
+
+
+
+
+
   @media(max-width:600px) {
     .col-sm-4 {
         display: block !important;
             max-width: 90%;
       }
+      #profilecard{
+        width: auto!important;
+      }
+
     }

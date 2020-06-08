@@ -1,34 +1,45 @@
 <?php
 include_once('db.php');
-session_start();
-
- $error="";
+//session_start();
+$mydb = new databasefull();
+ //$error="";
 // store session data
-if (isset($_POST['btn_doc'])) {
 
-$username=$_POST['dusername'];
-$name=$_POST['dname'];
-$email=$_POST['demail'];
-$password=$_POST['dpassword'];
-$age=$_POST['dage'];
-$address=$_POST['daddress'];
-$degree=$_POST['degree'];
+$username=$mydb->clearText($_POST['username']);
+$name=$mydb->clearText($_POST['name']);
+$email=$mydb->clearText($_POST['email']);
+$password=$mydb->clearText($_POST['password']);
+$table=$mydb->clearText($_POST['table']);
+$age=$mydb->clearText($_POST['age']);
+$address=$mydb->clearText($_POST['address']);
+$degree=$mydb->clearText($_POST['degree']);
 
-$gender=$_POST['dgender'];
-$phone=$_POST['dphone'];
-$image="";
+$gender=$mydb->clearText($_POST['gender']);
+$phone=$mydb->clearText($_POST['phone']);
+$name='Dr. '.$name;
 $role=2;
-
-$connection = new databasefull();
-$conobj=$connection->OpenCon();
-
-$userQuery=$connection->insertdoctor($conobj,"doctors",$username,$name,$email, $password,$age,$address,$degree,$gender,$phone,$image,$role);
+// file upload with unique name....
 
 
-$connection->CloseCon($conobj);
+
+$conobj=$mydb->OpenCon();
+
+$Query=$mydb->insertdoctor($conobj,$table,$username,$name,$email, $password,$age,$address,$degree,$gender,$phone,$role);
+
+if($Query){
+
+  echo 'New doctor added';
+
+
+  $mydb->CloseCon($conobj);
 
 
 }
+
+
+
+
+
 
 
 ?>

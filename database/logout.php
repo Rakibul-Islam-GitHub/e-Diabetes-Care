@@ -1,0 +1,9 @@
+<?php
+session_start();
+session_destroy();
+unset($_SESSION["username"]);
+unset($_SESSION["password"]);
+unset($_SESSION["role"]);
+session_destroy();
+header("Location:../portal.php");
+?>

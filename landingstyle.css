@@ -1,0 +1,272 @@
+*{
+  padding: =0;margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+
+}
+
+.top{
+
+    position:relative ;
+    left: 88%;
+width: 12%;
+}
+
+
+
+    #social-media-icon{
+          margin-top: 0; position:relative;
+
+          height:50px;
+          background-color: white;
+
+
+        }
+          #twitter{
+            float: left;
+          }
+          #facebook-icon{
+            float:left;
+          }
+          #google-plus-twitterIcon{
+            float: left;
+
+          }
+          #linkedin-icon{
+            float: left;
+          }
+    .contact-logo{
+      width:100%;
+      height: 100px;
+      border-top: 2px solid;
+      border-color:#F9F9FA;
+      position:relative;
+    }
+
+    #image{
+
+       width: 90%;
+       height: 100px;
+       margin-left: 5px;
+
+    }
+    .logo{
+      position: relative;
+      width: 20%;
+
+
+
+    }
+.font-icon{
+
+  width: 10px;
+height: 10px;
+margin-left: 5px;
+}
+     .contact{
+
+       width:60%;
+       height:4rem;
+       position: relative;
+left: 35%;
+margin-top: -75px;
+}
+
+     }
+     #image{
+
+        width: 20%;
+        height: 50px;
+
+      }
+      .contact-info{
+        float: left;
+      }
+      .item{
+        position: relative;
+display: inline-block;
+padding-left: 70px;
+margin-right: 40px;
+}
+
+.icon-box {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 53px;
+height: 53px;
+border-radius: 50%;
+text-align: center;
+line-height: 53px;
+border: 1px solid #5ec5cc;
+}
+.appointment-btn{
+  position: relative;
+  left: 10%;
+  margin-left: 20px;
+margin-top: 5px;
+}
+.menu{
+background-color: black;
+width: 100%;
+
+position: relative;
+right: 50%
+
+}
+#menu{
+  margin-top: 10px;
+  background-color: rgb(40,90,100);
+  color: white;
+
+}
+.nav-link{
+  padding: 3px;
+  color: white;
+}
+.container{
+  margin-top:20px;
+  margin-bottom: 15px;
+}
+.first-col{
+   padding-top: 10px;
+   padding-bottom: 10px;
+  background-color: rgb(73,189,197);
+}
+.second-col{
+  padding-top: 10px;
+   padding-bottom: 10px;
+  background-color: rgb(91,196,203);
+}
+.third-col{
+  padding-top: 10px;
+   padding-bottom: 10px;
+  background-color: rgb(111,203,209)
+}
+.text{
+  color: white;
+}
+.btn{
+ border-radius: 1px;
+ border-width: 2px;
+border-color:white;
+}
+.footer-main{
+ position: relative;
+background-size: cover;
+z-index: 1;
+background: #132646;
+}
+.footer-top{
+ padding-top: 85px;
+padding-bottom: 60px;
+}
+.row{
+ margin-right: -15px;
+margin-left: -15px;
+}
+.image{
+
+  width: 50%;
+  height: 75px;
+
+}
+.footer-text{
+ color: #ababab;
+}
+
+.social-icons{
+display: inline list-item;
+height: 30px;
+width: 30px;
+color: #48bdc5;
+background: #fff;
+text-align: center;
+border-radius: 50%;
+margin-left: 5px;
+}
+.post{
+position: relative;
+display: inline-block;
+
+}
+.post-image{
+margin: 0;
+padding: 0;
+
+}
+.footer-bottom {
+padding: 24px 0px;
+background: #0d1a2f;
+}
+.media-body {
+    margin-left: 10px;
+}
+
+.center{
+text-align: center;
+}
+.font-size{
+font-weight: .5rem;
+}
+.margin{
+  margin-left: 45px;
+}
+.ham-icon{
+  color:white;
+}
+.page-title {
+    color: #565656;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.btn.btn-rounded {
+    border-radius: 50px;
+}
+.btn-primary {
+    border-color: transparent;
+    background-color: #009efb;
+}
+.btn {
+    font-size: 0.875rem;
+}
+.blog {
+    position: relative;
+    margin: 0 0 50px;
+
+
+
+    border-radius: 4px;
+    padding: 20px;
+}
+.content{
+    background-color: rgb(250,250,250);
+}
+.margin-row{
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-top: 35px;
+
+}
+.font-color{
+color:black;
+}
+.footer-img{
+
+  width: 85px;
+  height: 85px;
+  padding: 4px;
+}
+
+@media(max-width:480px) {
+  .logo{
+      visibility: hidden;
+  }
+  .contact{
+  visibility: hidden;
+
+  }
+  }

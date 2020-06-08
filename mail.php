@@ -28,7 +28,7 @@ exit();
 }
 $content="From: $name \nEmail: $email \nMessage: $message";
 $recipient = "rakibulislam.cse21@gmail.com";
-$mailheader = "From: $email \r\n";
+$mailheader = "From: $email \r\n";  /// PHP_EOL er moto kaaj kore.... PHP_EOL is a string constant
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 print json_encode(array('message' => 'Email successfully sent!', 'code' => 1));
 exit();

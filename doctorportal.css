@@ -1,12 +1,10 @@
-*{
-  padding: =0;margin: 0;
+* {
+  padding: 0;
+  margin: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-
 }
-<<<<<<< HEAD
-=======
 
 .wrapper {
   width: 90%;
@@ -25,30 +23,29 @@
 }
 
 /* Headings */
-
-
 /**
  * Modals ($modals)
  */
-
 /* 1. Ensure this sits above everything when visible */
 .modal {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1em;   /* 1 */
-
+  font-size: 1em;
+  /* 1 */
   color: #444;
-    position: absolute;
-    z-index: 10000; /* 1 */
-    top: -60px;
-    left: 0;
-    visibility: hidden;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  z-index: 10000;
+  /* 1 */
+  top: -60px;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .modal.is-visible {
-    visibility: visible;
+  visibility: visible;
 }
+
 .modal-overlay {
   position: fixed;
   z-index: 10;
@@ -61,7 +58,6 @@
   opacity: 0;
   transition: visibility 0s linear 3s, opacity 0.3s;
 }
-
 
 .modal.is-visible .modal-overlay {
   opacity: 10;
@@ -85,8 +81,9 @@
   transform: translateY(-10%);
   opacity: 0;
 }
-.modal-close{
-  color:red;
+
+.modal-close {
+  color: red;
 }
 
 .modal.is-visible .modal-transition {
@@ -127,204 +124,181 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.modal-content > *:first-child {
-  margin-top: 0;
-}
-
-.modal-content > *:last-child {
-  margin-bottom: 0;
-}
-
-
-
->>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
-nav{
-  background: rgb(149,149,149);
+nav {
+  background: rgb(149, 149, 149);
   height: 50px;
   width: 100%;
 }
-  .logo{
-    color:white;
-    font-size: 20px;
-cursor: pointer;
-margin-top:5px;
-    margin-left: 5%;
-    font-weight: bold;
-  }
-  .top-segment{
-    float: right;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-  .top{
-    display: inline-block;
-    color:white;
-    font-size: 17px;
-    background-color: rgb(40,90,99);
-    text-transform: uppercase;
-    position: relative;
 
+.logo {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-left: 5%;
+  font-weight: bold;
+}
 
-  }
-  .section{
-    position: relative;
-  }
-.col-sm-4{
+.top-segment {
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.top {
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  background-color: rgb(40, 90, 99);
+  position: relative;
+}
+
+.section {
+  position: relative;
+}
+
+.col-sm-4 {
   width: 20%;
   position: static;
   text-align: center;
   float: left;
-display: table;
-   height:100px;
-  border: 1px solid rgb(200,200,150);
-
-
-
+  display: table;
+  height: 100px;
+  border: 1px solid rgb(200, 200, 150);
 }
-.navbar{
+
+.navbar {
   margin-top: 5%;
   margin-left: 0;
   text-align: center;
 }
-.navbar a{
+
+.navbar a {
   color: black;
- font-size: 14px;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   display: block;
   cursor: pointer;
   margin-left: 0;
-  padding:14px 24px;
+  padding: 14px 24px;
 }
-.navbar a:hover{
-  background-color: rgb(0,78,168);
 
+.navbar a:hover {
+  background-color: rgb(0, 78, 168);
 }
-.col-sm-8{
+
+.col-sm-8 {
   margin-top: 5px;
   float: right;
-background-color: rgb(249,249,250);
-   width:80%;
-}
-<<<<<<< HEAD
-.dashboard-div{
-=======
-#dashboard-div{
->>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
-  margin-top: 5px;
-  float: right;
-background-color: rgb(249,249,250);
-   width:80%;
-<<<<<<< HEAD
-
-=======
->>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
+  background-color: rgb(249, 249, 250);
+  width: 80%;
   position: relative;
   height: 100%;
 }
-.total-patient{
+
+#dashboard-div {
+  margin-top: 5px;
+  float: right;
+  background-color: rgb(249, 249, 250);
+  width: 80%;
+  position: relative;
+  height: 100%;
+}
+
+.total-patient {
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 3%;
   height: 250px;
-
-
-background-color: white;
-  border: 1px solid rgb(200,200,150);
-position: relative;
-
-
+  background-color: white;
+  border: 1px solid rgb(200, 200, 150);
+  position: relative;
 }
-.patient-img{
+
+.patient-img,.profile-img {
   float: left;
   width: 30%;
   height: 150px;
   margin-top: 7%;
-  margin-left:5%;
+  margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
-
-
 }
-.total-pat-value{
+
+.total-pat-value {
   float: left;
   width: 30%;
   margin-left: 20%;
-  margin-top:5%;
-    color: black;
-   font-size: 50px;
-    font-weight: bold;
-
+  margin-top: 5%;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
 }
-.upcoming-appointment{
+
+.upcoming-appointment {
   display: block;
-   position: relative;
+  position: relative;
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 3%;
-  height:250px
-  background-color: red;
-  border: 1px solid rgb(200,200,150);
+  height: 250px background-color: red;
+  border: 1px solid rgb(200, 200, 150);
 }
 
-.pat-btn{
-    padding: 12px 28px;
-    background-color: #008CBA;
-    border: none;
+.pat-btn {
+  padding: 12px 28px;
+  background-color: #008CBA;
+  border: none;
   color: white;
-font-size: 20px;
+  font-size: 20px;
   text-align: center;
   text-decoration: none;
 }
-.doctortable{
+
+.doctortable {
   margin-top: 50px;
-    overflow-y: scroll;
-    overflow-x: scroll;
-
-
-
 }
+
 .table {
-
   text-align: center;
-cursor: pointer;
-width: 100%;
-padding: 15px;
-margin-bottom: 1rem;
-color: #212529;
-font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 1rem;
+  color: #212529;
+  font-size: 15px;
+}
 
-}
 .table-bordered {
-border: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
 }
-th{
+
+th {
   background-color: dodgerblue;
-  color:white;
+  color: white;
 }
-th,td{
+
+th, td {
   padding: 10px;
 }
- tbody tr:hover {
-color: #212529;
-background-color: rgba(0, 0, 0, 0.075);
+
+tbody tr:hover {
+  color: #212529;
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
-<<<<<<< HEAD
-
-
-=======
-#profile-div{
+#profile-div {
   display: none;
-
   margin-top: 5px;
   float: right;
-background-color: rgb(249,249,250);
-   width:80%;
+  background-color: rgb(249, 249, 250);
+  width: 80%;
   position: relative;
   height: 100%;
 }
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -343,9 +317,7 @@ background-color: rgb(249,249,250);
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
 }
-
 
 .form-control {
   display: block;
@@ -368,7 +340,8 @@ background-color: rgb(249,249,250);
   background-color: #007bff;
   border-color: #007bff;
 }
-.profile-details{
+
+.profile-details {
   text-align: center;
   position: relative;
   margin-left: 10%;
@@ -377,122 +350,146 @@ background-color: rgb(249,249,250);
   background-color: white;
   margin-right: 20%;
   height: 100%;
-
 }
 
-
-#patient-div{
+#patient-div {
   display: none;
 }
-#appointment-div{
+
+#appointment-div {
   display: none;
 }
->>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
-@media(max-width:480px){
 
-  .total-patient{
-
+@media(max-width:480px) {
+  .total-patient {
     height: 120px;
     margin-bottom: 0px;
-
-
-
-  }
-  .total-pat-value{
-     font-size: 20px;
-      font-weight: bold;
-        margin-left: 0;
-
   }
 
-.dashboard-div{
-  width: 100%;
-}
-  .pat-btn{
+  .total-pat-value {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 0;
+  }
 
-      background-color: #008CBA;
-      border: none;
+  .dashboard-div {
+    width: 100%;
+  }
+
+  .pat-btn {
+    background-color: #008CBA;
+    border: none;
     color: white;
-  font-size: 10px;
+    font-size: 10px;
     text-align: center;
     text-decoration: none;
   }
-  .patient-img{
 
-    margin-left:5%;
-
-
-
+  .patient-img , .profile-img{
+    margin-left: 5%;
   }
-  .navbar{
 
+  .navbar {
     margin-left: 0;
-
   }
-  #pat-img{
+
+  #pat-img {
     width: 50%;
     height: 50%;
   }
 
-  .col-sm-4{
-  margin-left: 30%;
+  .col-sm-4 {
+    margin-left: 30%;
+  }
 
-
-
-}
-
-  .patient-img{
+  .patient-img, .profile-img {
     height: 100%;
   }
 
-  .doctortable{
-  width: 100%;
-  margin-left: 0;
-  margin-top: 2px;
-
-
-
+  .doctortable {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2px;
   }
 }
-<<<<<<< HEAD
-=======
 
 /* Appointment div start */
-
-.appointment-div-all{
-  background-color: rgb(248,248,250);
-  height:100%;
+.appointment-div-all {
+  background-color: rgb(248, 248, 250);
+  height: 100%;
   position: relative;
-
-
+  overflow: scroll;
 }
-.appointment-btn{
+
+.appointment-btn {
   float: right;
 }
-.btn{
+
+.btn {
   background-color: dodgerblue;
-border: none;
-color: white;
-padding: 5px 15px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 20px;
-}
-.h{
-  position: relative;
-  
+  border: none;
+  color: white;
+  padding: 5px 15px;
   text-align: center;
-}
-.color-table{
-  background-color:black;
-  color:white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
 }
 
-.appointment-table{
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+.h {
+  position: relative;
+  text-align: center;
 }
->>>>>>> c6508109ca893dd95ebde638ebf6498dafcff571
+
+/* appointmentdiv end */
+/* navbar style*/
+/**************/
+.navbar {
+  margin: 0;
+  margin-left: 0;
+}
+
+/* end of nvbar */
+/****************/
+.bmi-calorie {
+  margin: 5%;
+  text-align: center;
+}
+
+.bmi {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 6%;
+  margin-bottom: 5%;
+  height: 350px;
+  background-color: rgb(6, 4, 84);
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.h5 {
+  font-size: 35px;
+}
+
+#healthstatus-div {
+  display: none;
+}
+
+#calorie {
+  display: none;
+}
+#patientpage{
+  display: none;
+}
+.logout{
+
+    margin-bottom: 3px;
+
+}
+.logoutdiv a{
+  color: coral;
+font-family: auto;
+}
+
+/**** home page ******/

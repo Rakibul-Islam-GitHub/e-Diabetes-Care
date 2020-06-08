@@ -1,6 +1,6 @@
 {
   "localhost": "localhost",
-  "root": "root",
-  "pass": null,
-  "mydb": "mydb"
+  "username": "root",
+  "pass" : null,
+  "mydb": "e_diabetes_care"
 }

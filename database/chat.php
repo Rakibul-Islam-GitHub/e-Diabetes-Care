@@ -23,8 +23,6 @@ if ($_SESSION['role']==2) {
     $doctorname=$row['name'];
     $sender=$doctorname;
 
-    //$username=$row["username"]";"$name=$row['name']"."$email=$row['email']"."$password=$row['password']"."$age=$row['age']"."$address=$row['address']"."$degree=$row['degree']"."$gender=$row['gender']"."$mobileno=$row['mobileno']"."$image =$row['image']";
-
 
   }
 
